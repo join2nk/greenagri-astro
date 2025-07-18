@@ -1,5 +1,98 @@
+<<<<<<< HEAD:src/components/product.jsx
 import { useState } from "react";
 
+=======
+
+("use client");
+
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+  Popover,
+  PopoverButton,
+  PopoverGroup,
+  PopoverPanel,
+  Tab,
+  TabGroup,
+  TabList,
+  TabPanel,
+  TabPanels,
+} from "@headlessui/react";
+import {
+  Bars3Icon,
+  MagnifyingGlassIcon,
+  ShoppingBagIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
+import {
+  ChevronDownIcon,
+  FunnelIcon,
+  MinusIcon,
+  PlusIcon,
+  Squares2X2Icon,
+} from "@heroicons/react/20/solid";
+
+const navigation = {
+  categories: [
+    {
+      name: "Category 1",
+      featured: [
+        {
+          name: "Featured Item 1",
+          href: "#",
+          imageSrc: "https://via.placeholder.com/150",
+          imageAlt: "Featured Item 1",
+        },
+      ],
+      sections: [
+        {
+          name: "Section 1",
+          id: "section-1",
+          items: [{ name: "Item 1", href: "#" }],
+        },
+      ],
+    },
+  ],
+  pages: [{ name: "Page 1", href: "#" }],
+};
+
+const sortOptions = [
+  { name: "Most Popular", href: "#", current: true },
+  { name: "Best Rating", href: "#", current: false },
+  { name: "Newest", href: "#", current: false },
+  { name: "Price: Low to High", href: "#", current: false },
+  { name: "Price: High to Low", href: "#", current: false },
+];
+const subCategories = [
+  { name: "All Products", href: "#" },
+  { name: "Boiled Rice", href: "#" },
+  { name: "White Rice", href: "#" },
+];
+const filters = [
+  {
+    id: "category",
+    name: "Category",
+    options: [
+      { value: "Boiled IR Rice", label: "Boiled IR Rice", checked: false },
+      {
+        value: "Boiled Swarna Rice",
+        label: "Boiled Swarna Rice",
+        checked: false,
+      },
+      { value: "White Broken Rice", label: "White Broken Rice", checked: true },
+      { value: "White Rice", label: "White Rice", checked: false },
+    ],
+  },
+];
+>>>>>>> 80d3740276a48460f411899a0d3f37427c881b92:src/components/products-2.tsx
 const products = [
   {
     title: "Boiled IR Rice",
@@ -26,9 +119,19 @@ const products = [
     image: "/product-4.png",
   },
 ];
+<<<<<<< HEAD:src/components/product.jsx
 
 export default function ProductPage() {
   const [selectedProduct, setSelectedProduct] = useState(null);
+=======
+function classNames(...classes: (string | boolean | undefined)[]) {
+  return classes.filter(Boolean).join(" ");
+}
+import { useState } from "react";
+export default function Produtes() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+>>>>>>> 80d3740276a48460f411899a0d3f37427c881b92:src/components/products-2.tsx
 
   return (
     <div className="flex flex-col items-center min-h-screen p-6">

@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Card, CardContent, CardFooter } from "./ui/card";
 import {
   Carousel,
@@ -85,7 +84,7 @@ export function Products() {
                   {/* "Know More" Button */}
                   <a
                     href={product.link}
-                    // className="mt-3 px-4 py-2 bg-green-600 text-white rounded-md text-sm flex items-center gap-2 transition-all hover:bg-green-700"
+                  // className="mt-3 px-4 py-2 bg-green-600 text-white rounded-md text-sm flex items-center gap-2 transition-all hover:bg-green-700"
                   >
                     Know More →
                   </a>
@@ -100,18 +99,18 @@ export function Products() {
         <CarouselNext />
       </Carousel>
 
-     
-      <div className="mx-auto w-full flex justify-center">  
+
+      <div className="mx-auto w-full flex justify-center">
 
         <a
           href="/product"
-           data-aos="fade-up" data-aos-delay="200"
-          >
-         <Button
-         variant={'knowMore'}
+          data-aos="fade-up" data-aos-delay="200"
         >
-          Explore More
-         </Button> 
+          <Button
+            variant={'knowMore'}
+          >
+            Explore More
+          </Button>
         </a>
       </div>
     </div>

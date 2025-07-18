@@ -1,5 +1,5 @@
 ---
-import ProductPage from "@/components/product";
+import { Produtes } from "@/components/product.tsx";
 import OtherPageLayout from "@/layouts/OtherPageLayout.astro";
 ---
 
@@ -51,8 +51,8 @@ import OtherPageLayout from "@/layouts/OtherPageLayout.astro";
 
   <div class="p-4"></div>
   <section class="py-12">
-    <div class="rounded-lg max-w-7xl mx-auto">
-      <ProductPage client:load />
+    <div class="border rounded-lg max-w-7xl mx-auto">
+      <Produtes client:load />
     </div>
   </section>
 </OtherPageLayout>
