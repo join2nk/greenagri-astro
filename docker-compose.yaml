@@ -3,7 +3,7 @@ services:
     image: node:23
     working_dir: /usr/src/app
     ports:
-      - ${PORT:-8080}:${PORT:-8080}
+      - ${PORT:-3028}:${PORT:-8080}
     volumes:
       - ./dist:/usr/src/app
     command: npx http-server -p ${PORT:-8080}

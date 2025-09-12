@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^4.2.7",
+    "@astrojs/react": "^4.3.1",
     "@astrojs/tailwind": "^6.0.2",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
@@ -18,7 +18,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "aos": "^2.3.4",
-    "astro": "^5.7.11",
+    "astro": "^5.13.7",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.5.2",
