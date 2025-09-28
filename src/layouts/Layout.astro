@@ -1,24 +1,48 @@
 ---
 interface Props {
   title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  canonical?: string;
 }
-// ** not working well with aos **
-// import { ClientRouter }   from "astro:transitions";
-const { title = "Green Agri Coro" } = Astro.props;
+
+const { 
+  title = "Green Agri Corp Pvt. Limited - Premium Rice Manufacturer & Exporter", 
+  description = "Leading rice miller and exporter from Chhattisgarh, India. We export over 300,000 tonnes of premium quality rice annually to 25+ countries worldwide.",
+  keywords = "rice export, rice manufacturer, premium rice, Indian rice, Chhattisgarh rice, basmati rice, non-basmati rice, rice mill, agricultural products",
+  image = "/logo.webp",
+  canonical = Astro.url.href
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <!-- <meta name="viewport" content="width=device-width" /> -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1 maximum-scale=1.0, user-scalable=no"
-    />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonical} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
+    <link rel="apple-touch-icon" href="/logo.webp" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
